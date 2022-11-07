@@ -1,5 +1,7 @@
 body{
   background: blanchedalmond;
+  background-image: url('sprayPaint.gif')  ;
+  background-repeat: repeat;
 }
 h3{
   margin-top: 40px;

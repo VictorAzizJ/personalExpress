@@ -71,7 +71,7 @@ app.put('/dump', (req, res) => {
       }
     }, {
         sort: { _id: -1 },
-        upsert: true
+        upsert: false //makes sure not to create new false
       }, (err, result) => {
         if (err) return res.send(err)
         res.send(result)
@@ -84,6 +84,7 @@ app.delete('/Stock', (req, res) => {
   console.log(req.body);
 
   db.collection('locker').findOneAndDelete({ task: req.body.task }, (err, result) => {
+    //dont know why this still works but it does
     if (err) return res.send(500, err)
     res.send('Message deleted!')
   })

@@ -29,7 +29,7 @@ fetch('Stock', {
 
 Array.from(check).forEach(function (element) {
   element.addEventListener('click', function () {
-    debugger
+  
     const can = this.parentNode.parentNode.childNodes[1].innerText
     console.log(can); //this is the correct task
 
@@ -40,7 +40,7 @@ Array.from(check).forEach(function (element) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        'item': can.trim(),
+        'SprayPaint': can.trim(),
         // 'msg': msg
       })
     }).then(function (response) {
