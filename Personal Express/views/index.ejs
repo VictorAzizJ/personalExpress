@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Tag-a-Log</h1>
+  <h2>Keep status of the locker</h2>
+
+  <h2>Add a SprayPaint</h2>
+
+  <form action="/Donate" method="POST">
+
+    <input type="text" placeholder="Product Name" name="SprayPaint">
+    <select name="status" id="infoCan">
+    
+      <option value="full">Full</option>
+      <option value="half full">Half-Full</option>
+      <option value="low">Low</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+
+  <h3>Paint Locker</h3>
+  <ul class="Ready">
+    <% for(var i=0; i<locker.length; i++) {%>
+      <% if(locker[i].EmptyJawn === false) {%>
+        <li class="message <%= locker[i].statusupdate %>">
+          <span>
+            <%= locker[i].item %>
+          </span>
+          <span>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </span>
+          <span>
+            <i class="fa fa-check-square" aria-hidden="true"></i>
+          </span>
+        </li>
+        <% } %>
+          <% } %>
+  </ul>
+
+  <h3>Empty SprayPaint</h3>
+  <ul class="Empty">
+    <% for(var i=0; i<locker.length; i++) {%>
+      <% if(locker[i].EmptyJawn) {%>
+        <li class="message <%= locker[i].statusupdate %>">
+          <span>
+            <%= locker[i].item %>
+          </span>
+          <span>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </span>
+        </li>
+        <% } %>
+          <% } %>
+  </ul>
+
+
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
