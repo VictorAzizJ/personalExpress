@@ -9,3 +9,38 @@ h3{
 h3 { border: 3px solid black ;
 
 }
+
+ul {
+  border: 3px dotted blanchedalmond;
+  border-radius: 3%;
+}
+
+form{ display: flex; 
+  justify-content: center;
+  
+}
+h3{
+  display: flex; 
+  justify-content: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+li{
+  display: flex; 
+  justify-content: center;
+}
+
+h1{ display: flex; 
+  justify-content: center;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+h2{
+  display: flex; 
+  justify-content: center;
+  font-family: 'Permanent Marker', cursive;
+}
+span{
+  font-family: 'Permanent Marker', cursive;
+}
